@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Code') {
     steps {
         git branch: 'main',
-            url: 'https://github.com/milind55555/Java-maven-jenkins-tomcat-CICD.git'
+            url: 'https://github.com/Sucheta26/Java-Jenkins-Tomcat.git'
     }
 }
 
@@ -26,7 +26,7 @@ pipeline {
                     tomcat9(
                         credentialsId: 'tomcat-cred',
                         path: '',
-                        url: 'http://13.232.36.63:8080'
+                        url: 'http://13.206.144.126:8080'
                     )
                 ],
                 contextPath: '',
