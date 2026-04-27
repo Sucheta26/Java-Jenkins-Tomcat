@@ -23,14 +23,14 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 deploy adapters: [
-                    tomcat10(
+                    tomcat9(
                         credentialsId: 'tomcat-cred',
                         path: '',
                         url: 'http://13.235.238.12:8080'
                     )
                 ],
                 contextPath: '',
-                war: 'ROOT.war'
+                war: 'target/ROOT.war'
             }
         }
     }
